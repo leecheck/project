@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.DataCtdMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.DataCtd">
+        <id column="id" property="id" />
+        <result column="cruise_stance_id" property="cruiseStanceId" />
+        <result column="obs_flag" property="obsFlag" />
+        <result column="obs_depth" property="obsDepth" />
+        <result column="pressure" property="pressure" />
+        <result column="temperature" property="temperature" />
+        <result column="conductivity" property="conductivity" />
+        <result column="salinity" property="salinity" />
+        <result column="turbidity" property="turbidity" />
+        <result column="sound_velocity" property="soundVelocity" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cruise_stance_id, obs_flag, obs_depth, pressure, temperature, conductivity, salinity, turbidity, sound_velocity, remark
+    </sql>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.StationAdcpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.StationAdcp">
+        <id column="id" property="id" />
+        <result column="cruise_segment_id" property="cruiseSegmentId" />
+        <result column="metadata_id" property="metadataId" />
+        <result column="section_id" property="sectionId" />
+        <result column="time_zone" property="timeZone" />
+        <result column="obs_date" property="obsDate" />
+        <result column="obs_time" property="obsTime" />
+        <result column="station_lon" property="stationLon" />
+        <result column="station_lat" property="stationLat" />
+        <result column="remark" property="remark" />
+        <result column="is_display" property="isDisplay" />
+        <result column="geo" property="geo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cruise_segment_id, metadata_id, section_id, time_zone, obs_date, obs_time, station_lon, station_lat, remark, is_display, geo
+    </sql>
+
+</mapper>

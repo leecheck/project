@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.admin.SysSmsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.admin.SysSms">
+        <id column="id" property="id" />
+        <result column="sms_name" property="smsName" />
+        <result column="sms_template" property="smsTemplate" />
+        <result column="sms_note" property="smsNote" />
+        <result column="sms_user" property="smsUser" />
+        <result column="sms_singname" property="smsSingname" />
+        <result column="sms_code" property="smsCode" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sms_name AS smsName, sms_template AS smsTemplate, sms_note AS smsNote, sms_user AS smsUser, sms_singname AS smsSingname, sms_code AS smsCode
+    </sql>
+
+</mapper>

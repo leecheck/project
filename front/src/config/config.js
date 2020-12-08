@@ -1,0 +1,129 @@
+let eleConf = {
+    "CTD可视化产品": [{
+        title: "CTD可视化产品——压力",
+        key: "pressure",
+        unit: "hPa",
+        yKey: "obsDepth",
+        xKey: "pressure"
+    }, {
+        title: "CTD可视化产品——水温",
+        key: "temperature",
+        unit: "℃",
+        yKey: "obsDepth",
+        xKey: "temperature"
+    }, {
+        title: "CTD可视化产品——电导率",
+        key: "conductivity",
+        unit: "S/m",
+        yKey: "obsDepth",
+        xKey: "conductivity"
+    }, {
+        title: "CTD可视化产品——盐度",
+        key: "salinity",
+        unit: "",
+        yKey: "obsDepth",
+        xKey: "salinity"
+    }, {
+        title: "CTD可视化产品——浊度",
+        key: "turbidity",
+        unit: "FTU",
+        yKey: "obsDepth",
+        xKey: "turbidity"
+    }, {
+        title: "CTD可视化产品——声速",
+        key: "soundVelocity",
+        unit: "m/s",
+        yKey: "obsDepth",
+        xKey: "soundVelocity"
+    }],
+    "ADCP可视化产品": [{
+        title: "ADCP可视化产品——水平流速",
+        key: "horizontalVelocity",
+        unit: "cm/s",
+        yKey: "obsDepth",
+        xKey: "horizontalVelocity"
+    }, {
+        title: "ADCP可视化产品——水平流向",
+        key: "horizontalDirection",
+        unit: "°",
+        yKey: "obsDepth",
+        xKey: "horizontalDirection"
+    }, {
+        title: "ADCP可视化产品——垂直流速",
+        key: "verticalVelocity",
+        unit: "cm/s",
+        yKey: "obsDepth",
+        xKey: "verticalVelocity"
+    }],"生物化学可视化产品": [{
+        title: "生物化学可视化产品——盐度",
+        key: "salinity",
+        unit: "hPa",
+        yKey: "obsDepth",
+        xKey: "salinity"
+    }, {
+        title: "生物化学可视化产品——水温",
+        key: "temperature",
+        unit: "℃",
+        yKey: "obsDepth",
+        xKey: "temperature"
+    }, {
+        title: "生物化学可视化产品——溶解氧",
+        key: "dissolvedOxygen",
+        unit: "µmol/kg",
+        yKey: "obsDepth",
+        xKey: "dissolvedOxygen"
+    }, {
+        title: "生物化学可视化产品——PH",
+        key: "ph",
+        unit: "",
+        yKey: "obsDepth",
+        xKey: "ph"
+    }, {
+        title: "生物化学可视化产品——NH4-N氨氮",
+        key: "nh4N",
+        unit: "µmol/kg",
+        yKey: "obsDepth",
+        xKey: "nh4N"
+    }, {
+        title: "生物化学可视化产品——NO3-N硝酸盐",
+        key: "no3N",
+        unit: "µmol/kg",
+        yKey: "obsDepth",
+        xKey: "no3N"
+    }, {
+        title: "生物化学可视化产品——SiO4硅酸盐",
+        key: "sio4",
+        unit: "µmol/kg",
+        yKey: "obsDepth",
+        xKey: "sio4"
+    }, {
+        title: "生物化学可视化产品——NO2-N亚硝酸盐",
+        key: "no2N",
+        unit: "µmol/kg",
+        yKey: "obsDepth",
+        xKey: "no2N"
+    }, {
+        title: "生物化学可视化产品——PO4活性磷酸盐",
+        key: "po4",
+        unit: "µmol/kg",
+        yKey: "obsDepth",
+        xKey: "po4"
+    }, {
+        title: "生物化学可视化产品——叶绿素a",
+        key: "chlorophylA",
+        unit: "mg/m3",
+        yKey: "obsDepth",
+        xKey: "chlorophylA"
+    }],
+}
+
+let user = {
+    username: "admin",
+    password: "admin"
+}
+
+
+export {
+    eleConf, //分层要素配置
+    user
+}

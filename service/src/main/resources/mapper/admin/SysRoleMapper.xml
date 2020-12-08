@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.admin.SysRoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.admin.SysRole">
+        <id column="id" property="id" />
+        <result column="role_name" property="roleName" />
+        <result column="role_code" property="roleCode" />
+        <result column="role_type" property="roleType" />
+        <result column="is_enabled" property="isEnabled" />
+        <result column="remark" property="remark" />
+        <result column="name" property="name" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="update_user_id" property="updateUserId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, role_name AS roleName, role_code AS roleCode, role_type AS roleType, is_enabled AS isEnabled, remark, name, create_user_id AS createUserId, update_user_id AS updateUserId
+    </sql>
+</mapper>

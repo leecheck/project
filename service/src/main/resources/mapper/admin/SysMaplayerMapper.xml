@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.admin.SysMaplayerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.admin.SysMaplayer">
+        <id column="id" property="id" />
+        <result column="layer_id" property="layerId" />
+        <result column="layer_name" property="layerName" />
+        <result column="map_url" property="mapUrl" />
+        <result column="layer_url" property="layerUrl" />
+        <result column="description" property="description" />
+        <result column="object_key" property="objectKey" />
+        <result column="title_field" property="titleField" />
+        <result column="show_fields" property="showFields" />
+        <result column="info_fields" property="infoFields" />
+        <result column="feature_layer" property="featureLayer" />
+        <result column="is_load" property="isLoad" />
+        <result column="layer_group" property="layerGroup" />
+        <result column="query_fields" property="queryFields" />
+        <result column="active_identy" property="activeIdenty" />
+        <result column="layer_type" property="layerType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, layer_id AS layerId, layer_name AS layerName, map_url AS mapUrl, layer_url AS layerUrl, description, object_key AS objectKey, title_field AS titleField, show_fields AS showFields, info_fields AS infoFields, feature_layer AS featureLayer, is_load AS isLoad, layer_group AS layerGroup, query_fields AS queryFields, active_identy AS activeIdenty, layer_type AS layerType
+    </sql>
+</mapper>

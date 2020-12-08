@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.DataBiochemistryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.DataBiochemistry">
+        <id column="id" property="id" />
+        <result column="cruise_stance_id" property="cruiseStanceId" />
+        <result column="obs_depth" property="obsDepth" />
+        <result column="temperature" property="temperature" />
+        <result column="salinity" property="salinity" />
+        <result column="dissolved_oxygen" property="dissolvedOxygen" />
+        <result column="ph" property="ph" />
+        <result column="nh4-n" property="nh4N" />
+        <result column="no3-n" property="no3N" />
+        <result column="sio4" property="sio4" />
+        <result column="no2-n" property="no2N" />
+        <result column="po4" property="po4" />
+        <result column="chlorophyl_a" property="chlorophylA" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cruise_stance_id, obs_depth, temperature, salinity, dissolved_oxygen, ph, nh4_n, no3_n, sio4, no2_n, po4, chlorophyl_a, remark
+    </sql>
+
+</mapper>

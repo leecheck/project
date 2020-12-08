@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.RcBasicCruiseSegmentInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.RcBasicCruiseSegmentInfo">
+        <id column="id" property="id" />
+        <result column="cruise_segment_name" property="cruiseSegmentName" />
+        <result column="cruise_id" property="cruiseId" />
+        <result column="surship_info_id" property="surshipInfoId" />
+        <result column="invgion_area_id" property="invgionAreaId" />
+        <result column="start_time" property="startTime" />
+        <result column="time_standard_id" property="timeStandardId" />
+        <result column="west_long" property="westLong" />
+        <result column="east_long" property="eastLong" />
+        <result column="south_lat" property="southLat" />
+        <result column="north_lat" property="northLat" />
+        <result column="obs_info" property="obsInfo" />
+        <result column="stand_number" property="standNumber" />
+        <result column="mear_line_number" property="mearLineNumber" />
+        <result column="mear_line_length" property="mearLineLength" />
+        <result column="obs_sect_number" property="obsSectNumber" />
+        <result column="imp_chief_id" property="impChiefId" />
+        <result column="cary_item_number" property="caryItemNumber" />
+        <result column="exec_org_id" property="execOrgId" />
+        <result column="data_contact_id" property="dataContactId" />
+        <result column="reta_progress_id" property="retaProgressId" />
+        <result column="data_change_time" property="dataChangeTime" />
+        <result column="data_edit_id" property="dataEditId" />
+        <result column="edit_time" property="editTime" />
+        <result column="cruise_segment_remark" property="cruiseSegmentRemark" />
+        <result column="is_display" property="isDisplay" />
+        <result column="images_info_id" property="imagesInfoId" />
+        <result column="start_date" property="startDate" />
+        <result column="end_date" property="endDate" />
+        <result column="part_dict_person_number" property="partDictPersonNumber" />
+        <result column="part_person_number" property="partPersonNumber" />
+        <result column="part_untis_number" property="partUntisNumber" />
+        <result column="cruise_voyage" property="cruiseVoyage" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cruise_segment_name, cruise_id, surship_info_id, invgion_area_id, start_time, time_standard_id, west_long, east_long, south_lat, north_lat, obs_info, stand_number, mear_line_number, mear_line_length, obs_sect_number, imp_chief_id, cary_item_number, exec_org_id, data_contact_id, reta_progress_id, data_change_time, data_edit_id, edit_time, cruise_segment_remark, is_display, images_info_id, start_date, end_date, part_dict_person_number, part_person_number, part_untis_number, cruise_voyage
+    </sql>
+
+</mapper>

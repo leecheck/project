@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.admin.SysRunLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.admin.SysRunLog">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="user_name" property="userName" />
+        <result column="action_log" property="actionLog" />
+        <result column="action_ip" property="actionIp" />
+        <result column="action_desc" property="actionDesc" />
+        <result column="action_start" property="actionStart" />
+        <result column="action_end" property="actionEnd" />
+        <result column="action_count" property="actionCount" />
+        <result column="action_class" property="actionClass" />
+        <result column="action_method" property="actionMethod" />
+        <result column="action_args" property="actionArgs" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id AS userId, user_name AS userName, action_log AS actionLog, action_ip AS actionIp, action_desc AS actionDesc, action_start AS actionStart, action_end AS actionEnd, action_count AS actionCount, action_class AS actionClass, action_method AS actionMethod, action_args AS actionArgs, create_time AS createTime
+    </sql>
+    <select id="queryAllRunLog" resultType="Map" parameterType="hashmap">
+        select  <include refid="Base_Column_List"></include>
+        from sys_run_log where 1=1
+        <if test="userName!=null and userName!=''">
+            and user_name like CONCAT(CONCAT('%',#{userName},'%'))
+        </if>
+        <if test="actionStart!=null and actionStart!=''">
+            <![CDATA[ AND action_start >= #{actionStart,jdbcType=VARCHAR}]]>
+        </if>
+         <if test="actionEnd!=null and actionEnd!=''">
+            <![CDATA[ AND action_start <= #{actionEnd,jdbcType=VARCHAR}]]>
+        </if>
+        order by actionStart desc
+    </select>
+</mapper>

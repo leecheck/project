@@ -1,0 +1,191 @@
+[v-cloak] {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.form-reset .ivu-form-item{
+    margin-bottom: 10px;
+}
+
+.form-reset .ivu-input[disabled], fieldset[disabled] .ivu-input{
+    color: #332f2f;
+    background-color: #f6f6f6;
+}
+
+.form-reset .ivu-input{
+    border: 1px solid #e3e4e6;
+}
+
+.absoluteCotainer{
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+.absoluteArea{
+    position: absolute;
+}
+.reletiveContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.station_panel{
+    width: 300px;bottom: 5px;left:5px;z-index: 999;padding: 3px;
+    top: 64px;background:#2a3a67 url(../images/station_panel.png) no-repeat;
+}
+
+.form-reset-station .ivu-form-item{
+    margin-bottom: 10px;
+}
+
+.form-reset-station .ivu-input[disabled], fieldset[disabled] .ivu-input{
+    color: #332f2f;
+    background-color: #f6f6f6;
+}
+
+.form-reset-station .ivu-form-item-label{
+    color: white;
+}
+
+.form-reset-station .ivu-radio-wrapper{
+    color: white;
+}
+
+.form-reset-station .ivu-input{
+    color: #ffffff;
+    background-color: #2c3369;
+}
+
+.form-reset-station .ivu-input-group-append{
+    color: #ffffff;
+    background-color: #2c3369;
+}
+
+
+.form-reset-station .ivu-input-group-prepend{
+    background-color: #11333c;
+    color: white;
+}
+
+.back-blue{
+    color: #ffffff;
+    background-color: #2c3369;
+}
+
+
+.station_panel .meun-title {
+    color: #ffffff;
+    font-weight: 100;
+    padding: 0 0 0 10px;
+    font-size: 18px;
+    background-color: #17204a;
+    top: 0;width: 100%;height: 40px;line-height: 40px
+}
+.work_station .meun-title{
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+
+.station_panel .active {
+    background-color: #3d4e60;
+    border-right: 4px solid #647f9d;
+    color: #fff;
+}
+
+.station_item{
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+
+.table-reset .ivu-table-cell {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.modal-reset-index .ivu-table td{
+    background-color: #2a3a67;
+    color: white;
+}
+
+.modal-reset-index .ivu-table th{
+    background-color: #2a3a67;
+    color: white;
+}
+
+.modal-reset-index .ivu-modal-header {
+    border-bottom: 1px solid #124b83;
+    background-color: #222e64;
+}
+
+.modal-reset-index .ivu-modal-body {
+    background:#2a3a67 url(../images/workstation.png) no-repeat;
+}
+
+.modal-reset-index .ivu-modal-close {
+    color: #ffffff;
+}
+
+
+html {
+    height: 100%;
+    width: 100%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+}
+/*滚动条样式*/
+html ::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+html ::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+html ::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0 none;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none outside none;
+}
+caption, th {
+    text-align: left;
+}

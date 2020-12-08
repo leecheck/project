@@ -1,0 +1,68 @@
+server:
+  port: 2500                             #端口
+  servlet:
+    context-path: /nsfc               #工程访问上下文名称
+    session:
+      timeout: 3600s
+serverIP: localhost
+
+logging:
+  level:
+    com:
+      ltmap:
+        mapper: debugger
+
+spring:
+  # FREEMARKER (FreeMarkerAutoConfiguration)
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: true
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings:
+      template_update_delay: 0
+      default_encoding: UTF-8
+      classic_compatible: true
+      auto_import: common/core.ftl as c,common/layout.ftl as l
+  #国际化资源配置
+  messages:
+    basename: messages/message
+    encoding: UTF-8
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      location: ${java.io.tmpdir}
+      max-file-size: 100MB
+      max-request-size: 400MB
+      file-size-threshold: 4096KB
+      resolve-lazily: true
+
+path:
+  mysqlhome: D://MYSQL5.7//bin//
+  filePath: ${server.servlet.context-path}/file
+  sql: ${server.servlet.context-path}/file/sql
+wsServer: ws://${serverIP}:${server.port}${server.servlet.context-path}/EmvWs
+
+homePage: admin/sysUser/list
+stiuationStrategy: average # average/max
+
+database:
+  backup:
+    interval: 3 # 单位天
+
+JWT:
+  tokenKey: Auth
+
+config:
+  fileUpdatePath: D:\nsfc

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.RcBasicCruiseProjectInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.RcBasicCruiseProjectInfo">
+        <id column="id" property="id" />
+        <result column="project_name" property="projectName" />
+        <result column="project_code" property="projectCode" />
+        <result column="project_source" property="projectSource" />
+        <result column="project_type" property="projectType" />
+        <result column="invgion_area_id" property="invgionAreaId" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="obs_info" property="obsInfo" />
+        <result column="scien_objs" property="scienObjs" />
+        <result column="project_fund" property="projectFund" />
+        <result column="project_companys_id" property="projectCompanysId" />
+        <result column="project_lead_id" property="projectLeadId" />
+        <result column="project_edit_id" property="projectEditId" />
+        <result column="edit_time" property="editTime" />
+        <result column="reta_progress_id" property="retaProgressId" />
+        <result column="reta_change_time" property="retaChangeTime" />
+        <result column="project_remark" property="projectRemark" />
+        <result column="is_display" property="isDisplay" />
+        <result column="exam_progress_id" property="examProgressId" />
+        <result column="chief_scientist_id" property="chiefScientistId" />
+        <result column="invest_end_time" property="investEndTime" />
+        <result column="invest_start_time" property="investStartTime" />
+        <result column="chief_executive_scientist_id" property="chiefExecutiveScientistId" />
+        <result column="submit_status" property="submitStatus" />
+        <result column="submit_time" property="submitTime" />
+        <result column="impl_year" property="implYear" />
+        <result column="surship_id" property="surshipId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, project_name, project_code, project_source, project_type, invgion_area_id, start_time, end_time, obs_info, scien_objs, project_fund, project_companys_id, project_lead_id, project_edit_id, edit_time, reta_progress_id, reta_change_time, project_remark, is_display, exam_progress_id, chief_scientist_id, invest_end_time, invest_start_time, chief_executive_scientist_id, submit_status, submit_time, impl_year, surship_id
+    </sql>
+
+</mapper>

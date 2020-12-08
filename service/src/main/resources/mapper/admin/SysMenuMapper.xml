@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.admin.SysMenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.admin.SysMenu">
+        <id column="id" property="id" />
+        <result column="menu_url" property="menuUrl" />
+        <result column="menu_route" property="menuRoute" />
+        <result column="menu_name" property="menuName" />
+        <result column="menu_code" property="menuCode" />
+        <result column="menu_icon" property="menuIcon" />
+        <result column="menu_type" property="menuType" />
+        <result column="model_name" property="modelName" />
+        <result column="sort" property="sort" />
+        <result column="parent_id" property="parentId" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="update_user_id" property="updateUserId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, menu_url AS menuUrl, menu_route AS menuRoute, menu_name AS menuName, menu_code AS menuCode, menu_icon AS menuIcon, menu_type AS menuType, model_name AS modelName, sort, parent_id AS parentId, create_user_id AS createUserId, update_user_id AS updateUserId
+    </sql>
+
+    <select id="queryByUserId" resultType="com.gytech.entity.admin.SysMenu" parameterType="java.lang.Long" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_menu sm
+        WHERE sm.id IN
+        (SELECT
+        srm.menu_id
+        FROM
+        sys_role_menu srm
+        WHERE srm.role_id IN
+        (SELECT
+        role_id
+        FROM
+        sys_user_role
+        WHERE user_id =  #{userId,jdbcType=BIGINT}))
+    </select>
+
+</mapper>

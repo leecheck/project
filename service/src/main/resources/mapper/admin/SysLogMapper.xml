@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.admin.SysLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.admin.SysLog">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="log_type" property="logType" />
+        <result column="create_time" property="createTime" />
+        <result column="event" property="event" />
+        <result column="over_time" property="overTime" />
+        <result column="detail" property="detail" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id AS userId, log_type AS logType, create_time AS createTime, event,over_time AS overTime, detail
+    </sql>
+    <select id="selectAll" resultType="Map" parameterType="hashmap">
+        SELECT
+        t1.`id`,
+        t2.`display_name`,
+        t1.`log_type`,
+        t1.`event`,
+        t1.`create_time`,
+        t1.`over_time`,
+        t1.`detail`
+        FROM
+        sys_log t1
+        LEFT JOIN sys_user t2
+        ON t1.`user_id` = t2.`id`
+        WHERE 1=1
+        <if test="userId!=null and userId!=''">
+            and t1.`user_id`=#{userId}
+        </if>
+        <if test="logType!=null and logType!=''">
+            and t1.`log_type`=#{logType}
+        </if>
+        <if test="createTime!=null and createTime!=''">
+            <![CDATA[ AND t1.create_time >= #{createTime,jdbcType=VARCHAR} ]]>
+        </if>
+        <if test="overTime!=null and overTime!=''">
+            <![CDATA[ AND t1.create_time <= #{overTime,jdbcType=VARCHAR} ]]>
+        </if>
+        order by t1.create_time desc
+    </select>
+
+</mapper>

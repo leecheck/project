@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.DataMeteorologyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.DataMeteorology">
+        <id column="id" property="id" />
+        <result column="meteorology_station_id" property="meteorologyStationId" />
+        <result column="obs_height" property="obsHeight" />
+        <result column="air_pressure" property="airPressure" />
+        <result column="air_temperature" property="airTemperature" />
+        <result column="wind_velocity" property="windVelocity" />
+        <result column="wind_direction" property="windDirection" />
+        <result column="humidity" property="humidity" />
+        <result column="rainfall" property="rainfall" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, meteorology_station_id, obs_height, air_pressure, air_temperature, wind_velocity, wind_direction, humidity, rainfall, remark
+    </sql>
+
+</mapper>

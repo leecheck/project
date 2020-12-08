@@ -1,0 +1,137 @@
+$themeColor: #00284d;
+$themeColorTp: #00284df0;
+$themeLight: #2bffff;
+$fontColor: #fff;
+
+$font32: 32px;
+$black: #000000;
+
+$containerTop: 0px;
+$topHeight: 60px;
+$conditionHeight: 32px; //表格上方条件的高度
+
+.el-pagination {
+    margin: 5px 0;
+}
+.whiteText {
+    color: #fff;
+}
+.mainText {
+    color: rgb(54, 50, 50) !important;
+}
+
+.abs-verticle-center{
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.abs-hrizon-center{
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.abso{
+    position: absolute;
+}
+
+.rela{
+    position: relative;
+}
+
+@font-face {
+    font-family: 'FZGONGYHJW--GB1-0';
+    src: url('/static/font/FZGONGYHJW--GB1-0.TTF');
+}
+@font-face {
+    font-family: 'HYK2GJM_0';
+    src: url('/static/font/HYK2GJM_0.TTF');
+}
+
+@mixin routerView {
+    font-family: PingFang SC;
+    position: relative;
+    height: 100%;
+}
+
+@mixin search-btn {
+    position: absolute;
+    right: 0;
+}
+
+//组件的位置样式
+@mixin inputLocation($left: 10px, $width: 220px, $inputWidth: 180px) {
+    position: absolute;
+    left: $left;
+    width: $width;
+
+    & > p {
+        float: left;
+        font-size: 13px;
+        line-height: $conditionHeight;
+    }
+    .input {
+        float: left;
+        width: $inputWidth;
+    }
+}
+
+@mixin page {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+@mixin routerView {
+    font-family: PingFang SC;
+    position: relative;
+    height: 100%;
+}
+
+@mixin condition() {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: $conditionHeight;
+}
+
+@mixin table() {
+    position: absolute;
+    top: 44px;
+    width: 100%;
+}
+
+@mixin dialogForm {
+    .el-dialog__body {
+        padding: 0 24px 20px 24px;
+    }
+    .el-dialog__header {
+        padding: 10px;
+    }
+    .el-dialog__headerbtn {
+        top: 8px;
+        font-size: 22px;
+    }
+
+    .el-form-item__label {
+        font-size: 13px;
+    }
+    .el-dialog {
+        border-radius: 4px;
+    }
+}
+
+@mixin formBtn {
+    width: 100%;
+}
+
+@mixin line {
+    width: 100%;
+    height: 1px;
+    background: #167fff;
+    margin-bottom: 20px;
+}
+
+@mixin formInput($width: 260px) {
+    width: $width;
+}

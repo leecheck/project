@@ -1,0 +1,61 @@
+{
+  "wkid": 4490,
+  "iotServer": "ws://47.94.251.71:8999/IotHarborWebsocket",
+  "wsServer": "ws://localhost:2333/emv/StationWs",
+  "stationConf": [
+    {
+      "thing_id": "24260fd6f985c0a49b809f8409cfa3e1",
+      "base_key": "qpUG0Gqol9UAetxLe0OWJRR+Nz3PdTUFh1UA6A2ftik=",
+      "up_key": "TxWN",
+      "down_key": "WdGG",
+      "name": "台站1",
+      "longitude": 120.48123,
+      "latitude": 30.74383
+    },
+    {
+      "thing_id": "0e270cf2765c1deb89de3b416b9e262c",
+      "base_key": "UFfopacVRf9IqWj0/7FwY6rsJ0G0bgKEVJdcF9R61f0=",
+      "up_key": "TTCW",
+      "down_key": "xJam",
+      "name": "台站2",
+      "longitude": 120.47030,
+      "latitude": 30.74796
+    },
+    {
+      "thing_id": "1d435b3cd19d266be6800fc23fd079cc",
+      "base_key": "RuCMd+RW1Cy80h+yXcY8qkBVnN6L032H27WDSWGmSNc=",
+      "up_key": "QV8Z",
+      "down_key": "jlgA",
+      "name": "台站3",
+      "longitude": 120.48030,
+      "latitude": 30.75540
+    },
+    {
+      "thing_id": "eb8c2efa89109067d20e44a69672896e",
+      "base_key": "r/+FR49KUeww1FVl45FnP6Sk8eAfcR+8In9cRjlC4oQ=",
+      "up_key": "QgCy",
+      "down_key": "Qo5c",
+      "name": "台站4",
+      "longitude": 120.48825,
+      "latitude": 30.75760
+    },
+    {
+      "thing_id": "1e5ce5b3f92cbe70ed9d6aa18948fea0",
+      "base_key": "sDFRyNhg5Qq2KwJ6YK4b+QB8VCewJZb+iVAvnipojFM=",
+      "up_key": "VSeC",
+      "down_key": "nryt",
+      "name": "台站5",
+      "longitude": 120.49255,
+      "latitude": 30.75404
+    },
+     {
+       "thing_id": "7bad57a5d29c02d39bc0b40c113854d2",
+       "base_key": "xIGIGiPL6jqQP/9HoWtIzLysUQ2LyUhms9MUjGWd/rw=",
+       "up_key": "aa4e",
+       "down_key": "DsCb",
+       "name": "运行测试台站",
+       "longitude": 120.4964,
+       "latitude": 30.7436
+     }
+  ]
+}

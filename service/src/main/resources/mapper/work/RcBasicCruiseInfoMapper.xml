@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gytech.mapper.work.RcBasicCruiseInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gytech.entity.work.RcBasicCruiseInfo">
+        <id column="id" property="id" />
+        <result column="cruise_name" property="cruiseName" />
+        <result column="cruise_dentifr" property="cruiseDentifr" />
+        <result column="project_info_id" property="projectInfoId" />
+        <result column="invgion_area_id" property="invgionAreaId" />
+        <result column="invgion_season" property="invgionSeason" />
+        <result column="invgion_exec_time" property="invgionExecTime" />
+        <result column="Invgion_sum_days" property="invgionSumDays" />
+        <result column="west_long" property="westLong" />
+        <result column="east_long" property="eastLong" />
+        <result column="south_lat" property="southLat" />
+        <result column="north_lat" property="northLat" />
+        <result column="stand_number" property="standNumber" />
+        <result column="obs_sect_number" property="obsSectNumber" />
+        <result column="fligh_number" property="flighNumber" />
+        <result column="total_voyage" property="totalVoyage" />
+        <result column="cary_item_number" property="caryItemNumber" />
+        <result column="chief_id" property="chiefId" />
+        <result column="part_person_number" property="partPersonNumber" />
+        <result column="part_untis_number" property="partUntisNumber" />
+        <result column="exec_org_id" property="execOrgId" />
+        <result column="data_contact_id" property="dataContactId" />
+        <result column="reta_progress_id" property="retaProgressId" />
+        <result column="data_change_time" property="dataChangeTime" />
+        <result column="data_edit_id" property="dataEditId" />
+        <result column="edit_time" property="editTime" />
+        <result column="cruise_remark" property="cruiseRemark" />
+        <result column="is_display" property="isDisplay" />
+        <result column="exam_progress_id" property="examProgressId" />
+        <result column="chief_executive_scientist_id" property="chiefExecutiveScientistId" />
+        <result column="project_lead_id" property="projectLeadId" />
+        <result column="images_info_id" property="imagesInfoId" />
+        <result column="part_dict_person_number" property="partDictPersonNumber" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="cruise_report_id" property="cruiseReportId" />
+        <result column="data_report_id" property="dataReportId" />
+        <result column="data_file_id" property="dataFileId" />
+        <result column="spareValue1" property="spareValue1" />
+        <result column="spareValue2" property="spareValue2" />
+        <result column="spareValue3" property="spareValue3" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cruise_name, cruise_dentifr, project_info_id, invgion_area_id, invgion_season, invgion_exec_time, Invgion_sum_days, west_long, east_long, south_lat, north_lat, stand_number, obs_sect_number, fligh_number, total_voyage, cary_item_number, chief_id, part_person_number, part_untis_number, exec_org_id, data_contact_id, reta_progress_id, data_change_time, data_edit_id, edit_time, cruise_remark, is_display, exam_progress_id, chief_executive_scientist_id, project_lead_id, images_info_id, part_dict_person_number, start_time, end_time, cruise_report_id, data_report_id, data_file_id, spareValue1, spareValue2, spareValue3
+    </sql>
+
+</mapper>

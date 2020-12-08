@@ -1,0 +1,287 @@
+[v-cloak] {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.form-reset .ivu-form-item {
+    margin-bottom: 10px;
+}
+
+.form-reset .ivu-input[disabled], fieldset[disabled] .ivu-input {
+    color: #332f2f;
+    background-color: #f6f6f6;
+}
+
+.form-reset .ivu-input {
+    border: 1px solid #e3e4e6;
+}
+
+.absoluteCotainer {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+
+.absoluteArea {
+    position: absolute;
+}
+
+.reletiveContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/**
+系统管理模板样式
+ */
+.manage-meun-item {
+    line-height: 40px;
+    height: 40px;
+    color: #aab1b7;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.manage-meun-item a > i {
+    margin-right: 6px;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.manage-meun-item a {
+    color: #bec8d3;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+}
+
+.manage_label {
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    background-color: #354457;
+    padding: 20px;
+    font-size: 17px;
+    color: #fff;
+    vertical-align: bottom;
+}
+
+.manage-meun-item-active {
+    background-color: #2a4fa5;
+    border-right: 4px solid #d1dfff;
+    color: #fff;
+}
+
+.manage_menu .meun-title {
+    color: #bec8d3;;
+    padding: 7px 0 4px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/**
+panel 容器样式
+ */
+.list-panel-container {
+    border-radius: 4px;
+    background-color: #f4f7f7;
+    padding: 0px;
+}
+
+.list-panel-container .panel-head {
+    background-color: #354457;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    top: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.panel-title {
+    line-height: 40px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.panel-title i {
+    margin-right: 3px;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+.panel-body {
+    top: 40px;
+    bottom: 0;
+    width: 100%
+}
+
+.func-area {
+    top: 0;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+.func-item {
+    margin-left: 10px;
+}
+
+.list-area {
+    padding: 0 10px;
+    top: 50px;
+    width: 100%;
+    bottom: 40px;
+    overflow: auto;
+}
+
+.list-tree-area {
+    top: 50px;
+    width: 300px;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    border-right: #354457 1px dashed;
+    overflow: auto;
+}
+
+.list-right-area {
+    padding: 0 5px 0 10px;
+    top: 50px;
+    left: 300px;
+    right: 0;
+    bottom: 40px;
+    overflow: auto;
+}
+
+.page-area {
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    right: 0;
+    padding: 0 10px 0 10px;
+}
+
+.reset-drawer-body {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 50px;
+    overflow: auto
+}
+
+.custom-drawer-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 16px;
+    text-align: right;
+    background: #fff;
+}
+
+.tree-menu .ivu-tree-title {
+    padding: 1px 5px 1px 5px;
+    color: #3d4b69;
+    border-radius: 1px;
+    font-size: 14px;
+}
+
+
+.table-reset .ivu-table-cell {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+}
+
+/*滚动条样式*/
+html ::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+
+html ::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+html ::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0 none;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+li {
+    list-style: none outside none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background: #021e5e;
+}
+
+.nav-left {
+    float: left;
+    margin: 20px 40px;
+}
+
+.nav-right {
+    float: right;
+    font-size: 14px;
+    color: #fff;
+    line-height: 70px;
+    margin-right: 30px;
+}
