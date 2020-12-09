@@ -4,8 +4,7 @@ import com.gytech.appListener.ApplicationClosedListener;
 import com.gytech.appListener.ApplicationReadyListener;
 import com.gytech.appListener.ApplicationStartedListener;
 import com.gytech.appListener.ApplicationStartingListener;
-import com.gytech.work.SowWs;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gytech.work.Ws;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -25,6 +24,6 @@ public class AppApplication {
         application.addListeners(new ApplicationClosedListener());
         ConfigurableApplicationContext configurableApplicationContext = application.run(args);
         //解决WebSocket不能注入的问题
-        SowWs.setApplicationContext(configurableApplicationContext);
+        Ws.setApplicationContext(configurableApplicationContext);
 	}
 }

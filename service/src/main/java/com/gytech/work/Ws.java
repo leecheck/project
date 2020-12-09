@@ -5,32 +5,28 @@ import com.gytech.Base.BaseLogger;
 import com.gytech.Configuration.token.JwtUtil;
 import com.gytech.Security.entity.UserInfo;
 import com.gytech.service.ISysUserService;
-import com.gytech.work.entity.Affair;
 import com.gytech.work.entity.Key;
-import com.gytech.work.entity.StationDuty;
-import com.gytech.work.entity.WsRes;
-import org.apache.commons.lang.StringUtils;
+import com.gytech.work.entity.WsR;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.security.Principal;
-import java.util.Date;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * Created by LQ on 2018/10/9.
  * com.gytech.station
  */
-@ServerEndpoint(value = "/SowWs")
+@ServerEndpoint(value = "/Ws")
 @Component
-public class SowWs extends BaseLogger {
+public class Ws extends BaseLogger {
 
     /**
      * concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
      */
-    private static CopyOnWriteArraySet<SowWs> webSocketSet = new CopyOnWriteArraySet<SowWs>();
+    private static CopyOnWriteArraySet<Ws> webSocketSet = new CopyOnWriteArraySet<Ws>();
 
     /**
      * 与某个客户端的连接会话，需要通过它来给客户端发送数据
@@ -44,7 +40,7 @@ public class SowWs extends BaseLogger {
     private UserInfo userInfo;
 
     public static void setApplicationContext(ApplicationContext applicationContext) {
-        SowWs.applicationContext = applicationContext;
+        Ws.applicationContext = applicationContext;
     }
     /**
      * 连接建立成功调用的方法
@@ -73,19 +69,14 @@ public class SowWs extends BaseLogger {
      */
     @OnMessage
     public void onMessage(String message, Session session) {
-        WsRes msg = JSON.parseObject(message,WsRes.class);
+        WsR msg = JSON.parseObject(message,WsR.class);
         String msType = msg.getType();
         Object data = msg.getData();
-        String target = msg.getTarget();
         switch (msType){
             case Key.BASE_USERTOKEN:
                 String token = String.valueOf(data);
                 setUser(token,msg);
                 break;
-            case Key.DUTY_ORG_INFO:
-                Long oid = Long.valueOf(target);
-                break;
-
             default:
                     break;
         }
@@ -106,7 +97,7 @@ public class SowWs extends BaseLogger {
      *
      * @param res 返回true表示放行
      */
-    public boolean filterMessage(WsRes res) {
+    public boolean filterMessage(WsR res) {
 
         return false;
     }
@@ -115,7 +106,7 @@ public class SowWs extends BaseLogger {
      * 发送信息
      * @param res
      */
-    public void sendMessage(WsRes res) {
+    public void sendMessage(WsR res) {
         if (session != null) {
             if(true){
                 synchronized(session){
@@ -138,15 +129,15 @@ public class SowWs extends BaseLogger {
     /**
      * 群发自定义消息
      */
-    public static void sendInfo(WsRes res) {
-        for (SowWs item : webSocketSet) {
+    public static void sendInfo(WsR res) {
+        for (Ws item : webSocketSet) {
             synchronized(item){
                 item.sendMessage(res);
             }
         }
     }
 
-    private void setUser(String token,WsRes req){
+    private void setUser(String token,WsR req){
         UserInfo user = JwtUtil.extrack(token);
         if (user!=null){
             this.userInfo = user;
