@@ -7,6 +7,7 @@
 <script>
     import "typical-base/css/reset.css";
     import "typical-base/css/base.css";
+    import 'nprogress/nprogress.css'
     import Vue from "vue";
     export default {
         name: "App",

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import storage from '@/store/storage'
+import NProgress from 'nprogress';
 
 Vue.use(Router);
 
@@ -43,6 +44,7 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
+    NProgress.start();
     var token = storage.getToken();
     if (token) { //登录未过期
         if (router.options.menuAdd || isGlobalRoutes(to)) {
@@ -112,6 +114,7 @@ function isGlobalRoutes(to) {
 }
 
 router.afterEach(route => {
+    NProgress.done();
     window.scrollTo(0, 0);
 });
 

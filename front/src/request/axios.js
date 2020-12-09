@@ -2,13 +2,15 @@ import axios from 'axios'; // 使用axios库
 import config from './config';
 import Cookies from "js-cookie";
 import router from '../router'
+import NProgress from 'nprogress';
 
 let $axios = {};
 /**
- * 基础方法 
+ * 基础方法
  * responseType `responseType` 表示服务器响应的数据类型，可以是 'arraybuffer', 'blob', 'document', 'json', 'text', 'stream'
  */
 $axios.base = (req, opt) => {
+    NProgress.start();
     let { url, data, method, param, responseType = "json" } = req;
     let { timeout = config.timeout, headers = config.headers, Auth = true, tokenKey = global.tokenKey || "token" } = opt;
     return new Promise((resolve, reject) => {
@@ -65,9 +67,11 @@ $axios.base = (req, opt) => {
         );
         // 请求处理
         instance(req).then(res => {
+            NProgress.done();
             resolve(res);
             return false
         }).catch(error => {
+            NProgress.done();
             reject(error)
         })
     })
